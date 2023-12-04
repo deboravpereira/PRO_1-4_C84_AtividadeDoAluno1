@@ -11,6 +11,7 @@ import { Avatar, ListItem, Icon } from "react-native-elements";
 import db from "../config";
 
 export default class SearchScreen extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -19,6 +20,7 @@ export default class SearchScreen extends Component {
       lastVisibleTransaction: null,
     };
   }
+  
   componentDidMount = async () => {
     this.getTransactions();
   };
@@ -96,6 +98,7 @@ export default class SearchScreen extends Component {
       </View>
     );
   };
+
   handleSearch = async text => {
     var enteredText = text.toUpperCase().split("");
     text = text.toUpperCase();
@@ -132,7 +135,8 @@ export default class SearchScreen extends Component {
         });
     }
   };
-    
+
+  //Adicione aqui a função para buscar mais informações
   
   render() {
     const { searchText, allTransactions } = this.state;
